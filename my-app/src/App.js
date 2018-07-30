@@ -25,7 +25,7 @@ class App extends Component {
     wrong: "",
     clicked: [],
   };
-}
+
 
 handleClick = id => {
   if (this.state.clicked.indexOf(id) === -1) {
@@ -68,14 +68,14 @@ handleShuffle = () => {
   this.setState({ cars: shuffledcars });
 };
 
-render () 
+render() {
   return (
     <Wrapper>
       <Nav
-        title="Clicky Game"
+        title="Cars Clicky Game"
         score={this.state.currentScore}
         topScore={this.state.topScore}
-        wrong={this.state.wrong}
+        wrong={this.state.rightWrong}
       />
 
         <Title>
@@ -84,7 +84,7 @@ render ()
 
         <Container>
           <Row>
-          {this.state.cars.map(car => (
+            {this.state.cars.map(car => (
               <Column size="md-3 sm-6">
                 <CarsCard
                   key={car.id}
@@ -101,7 +101,7 @@ render ()
         </Container>
       </Wrapper>
     );
-  
-
+  }
+}
 
 export default App;
