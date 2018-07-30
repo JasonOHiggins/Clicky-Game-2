@@ -4,21 +4,33 @@ import Nav from "./components/Nav";
 import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
 import './App.css';
+import cars from "./cars.json";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+  state = {
+    cars,
+    currentScore: 0,
+    topScore: 0,
+    wrong: "",
+    clicked: [],
+  };
 }
+
+render () {
+  return (
+    <Wrapper>
+      <Nav
+        title="Clicky Game"
+        score={this.state.currentScore}
+        topScore={this.state.topScore}
+        wrong={this.state.wrong}
+        />
+
+        <Title>
+          Click each car, but not more than once, or you're OUTTA THERE!
+        </Title>
+        </Wrapper>
+  )
+};
 
 export default App;
