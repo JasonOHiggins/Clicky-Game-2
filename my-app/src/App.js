@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CarsCard from "./my-app/components/CarsCard";
+import CarsCard from "./components/CarsCard";
 import Nav from "./components/Nav";
 import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
