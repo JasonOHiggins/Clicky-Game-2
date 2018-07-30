@@ -78,9 +78,7 @@ render() {
         wrong={this.state.rightWrong}
       />
 
-        <Title>
-          Click each car, but not more than once, or you're OUTTA THERE!
-        </Title>
+        <Title></Title>
 
         <Container>
           <Row>
